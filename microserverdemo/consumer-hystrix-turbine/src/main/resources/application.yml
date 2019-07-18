@@ -1,0 +1,19 @@
+server:
+  port: 8300
+spring:
+  application:
+    name: consumer-hystrix-turbine
+user:
+    url: http://127.0.0.1:7900/user/
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:10000/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    cluster-config: CONSUMER-ORDER-HYSTRIX
+  app-config: consumer-order-hystrix

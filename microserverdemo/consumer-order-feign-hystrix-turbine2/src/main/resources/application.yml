@@ -1,0 +1,22 @@
+
+server:
+  port: 8900
+  context-path: /feignhystrix
+spring:
+  application:
+    name: consumer-order-feign-hystrix-turbine2
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:10000/eureka
+  instance:
+    prefer-ip-address: true
+    home-page-url-path: /feignhystrix
+    metadata-map:
+      management.port: 8910 #可以直接管理：8900/feignhystrix
+feign:
+    hystrix:
+      enabled: true
+
+management:
+  port: 8910

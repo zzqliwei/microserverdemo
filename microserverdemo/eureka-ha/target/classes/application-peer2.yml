@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-ha
+  profiles:
+    active: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://user:123@peer1:8761/eureka,http://user:123@peer3:8763/eureka
+security:
+  basic:
+    enabled: true #开启安全配置，只能放在application.yml中
+  user:
+    name: user
+    password: 123
