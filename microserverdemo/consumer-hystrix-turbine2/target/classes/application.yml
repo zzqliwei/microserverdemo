@@ -2,7 +2,7 @@ server:
   port: 8300
 spring:
   application:
-    name: consumer-hystrix-turbine
+    name: consumer-hystrix-turbine2
 user:
     url: http://127.0.0.1:7900/user/
 
@@ -15,5 +15,6 @@ eureka:
     prefer-ip-address: true
 turbine:
   aggregator:
-    cluster-config: CONSUMER-ORDER-HYSTRIX
-  app-config: consumer-order-hystrix
+    cluster-config: defalut
+  app-config: consumer-order-hystrix,consumer-order-feign-hystrix
+  cluster-name-expression: "'defalut'"
