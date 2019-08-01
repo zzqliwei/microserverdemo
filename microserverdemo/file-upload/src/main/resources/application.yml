@@ -1,0 +1,19 @@
+server:
+  port: 8050
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@192.168.1.55:10000/eureka
+      #defaultZone: http://user:123@peer2:8762/eureka
+  instance:
+    prefer-ip-address: true #显示IP
+
+spring:
+  application:
+    name: file-upload
+  http:
+    multipart:
+      max-request-size: 250MB
+      max-file-size: 200MB

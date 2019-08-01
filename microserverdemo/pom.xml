@@ -28,6 +28,12 @@
     <module>consumer-hystrix-turbine4</module>
     <module>consumer-order-feign-hystrix-turbine</module>
     <module>consumer-order-feign-hystrix-turbine2</module>
+    <module>apigateway-zuul</module>
+    <module>apigateway-zuul-reg</module>
+    <module>file-upload</module>
+    <module>apigateway-zuul-fallback</module>
+    <module>slider</module>
+    <module>apigateway-zuul-filter</module>
   </modules>
 
   <name>microserverdemo</name>
@@ -64,7 +70,7 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-<!--springboot 依赖-->
+  <!--springboot 依赖-->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
